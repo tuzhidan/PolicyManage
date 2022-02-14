@@ -5,6 +5,7 @@ Windows Policy 组策略批量管理工具
 开发语言：C#
 
 运行方式：命令行运行
+
 useage: PolicyManage.exe -command [options]
         -export [txt file], 导出所有pol文件记录到文本文档
         -import [txt file], 批量导入记录到组策略，格式可先导出样例查看
