@@ -1,0 +1,19 @@
+﻿***********************************************************
+***														***
+***	批量设置组策略模板文件，一行代表一条组策略设置记录	***
+***														***
+***********************************************************
+
+策略大类|策略对应注册表|注册表类型|注册表项名称|注册表项值
+
+策略大类：0-代表Machine，计算机配置 1-代表User，用户配置
+策略对应注册表：对应的注册表URL路径
+注册表类型：目前支持REG_DWORD和REG_SZ类型
+注册表项名称：对应注册表项名，禁用策略时名称增加前缀**del.
+注册表项值：对应注册表项值，REG_DWORD时0代表已禁用，1代表已启用,2代表未配置
+
+举例：
+1|Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer|REG_DWORD|ClearRecentDocsOnExit|0
+1|Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer|REG_DWORD|ClearRecentProgForNewUserInStartMenu|0
+1|Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer|REG_DWORD|ClearRecentProgForNewUserInStartMenu|2
+1|Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer|REG_SZ|**del.ClearRecentDocsOnExit| 
